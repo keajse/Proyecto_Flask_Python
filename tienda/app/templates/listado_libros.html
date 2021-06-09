@@ -1,25 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{%extends './body.html'%}
+
+{%block title %}Libros{%endblock%}
+
+{%block container%}
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <h1>{{ data.titulo}}</h1>
+    </div>
+</div>
+<hr />
+<div class="row">
+    {% for l in data.libros %}
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <div class="card mb-4 shadow-sm">
+            {% set url='img/portadas/'+l.isbn+'.jpg' %}
+            <img class="card-img-top" src="{{ url_for('static',filename=url)}}"height="320" alt="{{l.titulo}}">
+            <div class="card-body">
+                <h5 class="card-title">{{l.titulo}}</h5>
+                <p class="card-text">{{l.autor.nombre_completo()}}</p>
+                <button id="{{l.isbn}}" class="btn btn block btn-primary">Comprar</button>
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
     
-    <table>
-        
-        {%for l in data.libros%}
-        <tr>
-            <td>{{ l.isbn }}</td>
-            <td>{{ l.titulo }}</td>
-            <td>{{ l.aniobendicion }}</td>
-            <td>{{ l.autor.apellidos }}</td>
-            <td>{{ l.autor.nombres }}</td>
-            <td>{{ l.precio }}</td>
-        </tr>
-        {% endfor %}
-    </table>
-</body>
-</html>
+</div>
+{%endblock%}
+

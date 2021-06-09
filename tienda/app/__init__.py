@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, session, flash
+from flask import Flask, render_template, request, redirect, url_for, session, flash, jsonify
 import flask
 from flask_mysqldb import MySQL
 from flask_wtf.csrf import CSRFProtect
@@ -20,9 +20,13 @@ login_manager_app= LoginManager(app)
 def load_user(id):
     return ModeloUsuario.obtener_por_id(db,id)
 
-@app.route('/')
+@app.route('/index')
 def index():
     return render_template('index.html')
+
+@app.route('/')
+def principal():
+    return render_template('principal.html')
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -74,6 +78,7 @@ def listar_libros():
     try:
         libros= ModeloLibro.listar_libros(db)
         data={
+            'titulo': 'Listado de libros',
             'libros': libros
         }
         return render_template('listado_libros.html', data=data)
@@ -81,6 +86,21 @@ def listar_libros():
         print(ex)
 
     return render_template('')
+
+
+@app.route('/compraLibro', methods=['POST'])
+def comprar_libro():
+    data_request= request.get_json()
+    print(data_request)
+    data={}
+    try:
+        #libro= Libro()
+        data['exito'] = True
+    except Exception as ex:
+        data['mensaje']=format(ex)
+        data['exito']=False
+    return jsonify(data)
+
     
 @app.route('/password/<password>')
 def generate_password(password):

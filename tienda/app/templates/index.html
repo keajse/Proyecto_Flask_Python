@@ -7,8 +7,45 @@
 <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <h1>Paz y bien</h1>
+        <a class="nav-link" href="{{url_for('logout')}}">Cerrar Sesión</a>
+    </div>
+    
+            <div class="col-md-4">
+                <img src="{{url_for('static', filename='img/jp.jpg')}}" alt="...">
+            </div>
+            <div >
+
+                <h5 class="card-title">Fragmento Carta a los artistas</h5>
+                <p>
+                    Con esta Carta me dirijo a vosotros, artistas del mundo entero, 
+                    para confirmaros mi estima y para contribuir a reanudar 
+                    una más provechosa cooperación entre el arte y la Iglesia. 
+                    La mía es una invitación a redescubrir la profundidad de la dimensión espiritual y
+                        religiosa que ha caracterizado el arte en todos los tiempos, en sus más nobles formas
+                        expresivas. En este sentido os dirijo una llamada a vosotros, artistas de la palabra escrita y
+                        oral, del teatro y de la música, de las artes plásticas y de las más modernas tecnologías de la
+                        comunicación. Hago una llamada especial a los artistas cristianos. Quiero recordar a cada uno de
+                        vosotros que la alianza establecida desde siempre entre el Evangelio y el arte, más allá de las
+                        exigencias funcionales, implica la invitación a adentrarse con intuición creativa en el misterio
+                        del Dios encarnado y, al mismo tiempo, en el misterio del hombre.
+
+                        Todo ser humano es, en cierto sentido, un desconocido para sí mismo. Jesucristo no solamente
+                        revela a Dios, sino que «manifiesta plenamente el hombre al propio hombre». En Cristo, Dios ha
+                        reconciliado consigo al mundo. Todos los creyentes están llamados a dar testimonio de ello; pero
+                        os toca a vosotros, hombres y mujeres que habéis dedicado vuestra vida al arte, decir con la
+                        riqueza de vuestra genialidad que en Cristo el mundo ha sido redimido: redimido el hombre,
+                        redimido el cuerpo humano, redimida la creación entera, de la cual san Pablo ha escrito que
+                        espera ansiosa «la revelación de los hijos de Dios» (Rm 8, 19). Espera la revelación de los
+                        hijos de Dios también mediante el arte y en el arte. Ésta es vuestra misión. En contacto con las
+                        obras de arte, la humanidad de todos los tiempos —también la de hoy— espera ser iluminada sobre
+                        el propio rumbo y el propio destino.”
+
+                    </p>
+                <p class="card-text"><small class="text-muted">San Juan Pablo II, Carta a los artistas, 14.</small></p>
+
+            </div>
+        </div>
+
     </div>
 
-</div>
-
-{% endblock %}
+    {% endblock %}

@@ -1,0 +1,83 @@
+{%extends './body.html'%}
+
+{%block title %} Index {%endblock%}
+
+{%block container %}
+
+<a class="nav-link" href="{{url_for('login')}}">Iniciar sesión</a>
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{url_for('static', filename='img/portadas/978849840983.jpg')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{url_for('static', filename='img/portadas/978847118468.jpg')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{url_for('static', filename='img/portadas/978849061483.jpg')}}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="{{url_for('static', filename='img/portadas/978847118468.jpg')}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Resumen y sinópsis de El mendigo alegre. Historia de San Francisco de Asís de Louis de Wohl</h5>
+                        <p class="card-text">Asís y Perugia están en guerra. Entre los oficiales de las tropas de Asís hay un joven desenfadado y alegre llamado Francisco Bernardone. La ciudad de Asís pierde la guerra, pero en realidad, en medio de la batalla, tuvo lugar una gran victoria para el mundo: otro joven oficial, Roger, conde de Vandria, salvó la vida de Francisco. Desde la movida juventud de Francisco, hasta la magnífica escena de su muerte, todo este relato está llevado con el contrapunto de la historia de Roger de Vandria, escéptico y materialista, que se percata casi demasiado tarde de que todas sus hazañas no significan prácticamente nada comparadas con el heroico gesto que salvó la vida de su amigo Francisco. Es una historia que hierve de acción y de caracteres finamente dibujados: santa Clara, de belleza delicada; el rey de Sicilia y emperador del Sacro Imperio, Federico; el sultán Al-Kamil; el papa Inocencio III... El escenario de la acción nos traslada desde Asís a Roma, a Sicilia y a las arenas de Egipto.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{url_for('static', filename='img/portadas/978849061483.jpg')}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Sinopsis de DAVID DE JERUSALEN</h5>
+                        <p class="card-text">Louis de Wohl revive la antigua y amada historia de David con toda su fuerza y esplendor. Novela basada en el relato bíblico y en la propia investigación histórica del autor. De todas las figura heroicas del Antiguo Testamento pocas son más deslumbrantes que las de David, el joven pastor destinado a gobernar Israel y ninguna contiene una mezcla tan atractiva y sobrecogedora de humana piedad, grandeza y fragilidad. En las expertas manos de Louis de Wohl la antigua y amada historia de David revive con toda su fuerza y esplendor. Comienza cuando un desconocido joven es ungido por el profeta Samuel y continúa a través de sus años de servicio al Rey Saúl, del esplendor de su propio y largo reinado, de las desilusiones del envejecimiento y de la promesa eterna que hace presagiar el fin. Jonatán el amigo, la princesa Michol y la hermosa Bets</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{url_for('static', filename='img/portadas/978848353021.jpg')}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Sinopsis</h5>
+                        <p class="card-text">La Ciencia de la Cruz' constituye el últim o trabajo escrito de Edith Stein. Es el fruto de su m adurez intelectual y espi­ ritual. Una aportación im portante en el sector de estudios sobre San Juan de la Cruz. Durante el siglo XX la producción literaria sanjuanista se ha increm entado de modo increíble, entre la fecha de de­ claración de «Doctor de la Iglesia» (1926), y la celebración del IV Centenario de su m uerte (1991). En m edio de estas fechas se celebró el IV centenario del nacim iento del Santo (1942), año que coincide con el m artirio de Edith Stein. No obstante que su obra, La Ciencia de la Cruz, fue escrita para esta celebración, no verá la luz hasta 1950, año de su p r i­ m era publicación en Alemania. El presente artículo quiere analizar esta obra en lo que constituye su elaboración y su contenido, es decir, las cir­ cunstancias externas que rodean y m otivan este libro, y la estructura interna del mismo. Sólo así se podrá descubrir su valor y originalidad, tam bién sus limitaciones.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{url_for('static', filename='img/portadas/978842853049.jpg')}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Fragmento del libro - Confesiones, Libro VIII, capitulo XII</h5>
+                        <p class="card-text">Estaba yo diciendo esto y llorando con amarguísima contrición de mi corazón, cuando he aquí que de la casa inmediata oigo una voz como de un niño o niña, que cantaba y repetía muchas veces: Toma y lee, toma y lee. Yo mudando de semblante me puse luego al punto a considerar con particularísimo cuidado, si por ventura los muchachos solían cantar aquello o cosa semejante en alguno de sus juegos, y de ningún modo se me ofreció que lo hubiese oído jamás. Así, reprimiendo el ímpetu de mis lágrimas me levanté de aquel sitio, no pudiendo interpretar de otro modo aquella voz, sino como una orden del cielo, en que de parte de Dios se me mandaba que abriese el libro de las Epístolas de San Pablo, y leyese el primer capítulo que casualmente se me presentase. Porque había oído contar del santo abad Antonio, que entrando por casualidad en la iglesia al tiempo que se leían aquellas palabras del Evangelio: Vete, vende todo lo que tienes y dalo a los pobres, y tendrás un tesoro en el cielo, y después sígueme, él las había entendido como si hablaran con él determinadamente, y obedeciendo a aquel oráculo, se había convertido a Vos sin detención alguna. Yo, pues, a toda prisa volví al lugar donde estaba sentado Alipio, porque allí había dejado el libro del Apóstol, cuando me levanté de aquel sitio. Agarré el libro, le abrí, y leí para mí aquel capítulo que primero se presentó a mis ojos, y eran estas palabras: "No en banquetes ni embriagueces, no en vicios y deshonestidades, no en contiendas y emulaciones, sino revestíos de nuestro Señor Jesucristo, y no empleéis vuestro cuidado en satisfacer los apetitos del cuerpo". No quise leer más adelante, ni tampoco era menester, porque luego que acabé de leer esta sentencia, como si se me hubiera infundido en el corazón un rayo de luz clarísima se disiparon enteramente todas las tinieblas de mis dudas..</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
